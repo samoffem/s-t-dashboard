@@ -111,7 +111,7 @@ const SidebarWrap = styled.div`
     position: fixed;
 
     .sidebar-content{
-        padding-top: 30px;
+        padding-top: 40px;
         display: flex;
         flex-direction: column;
         height: 100%;

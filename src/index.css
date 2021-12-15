@@ -1,7 +1,11 @@
 
 :root{
   --background-color: #050514;
+  --background-color2: #141518;
+  --color-green: #39bd45;
   --border-color: #008e8a;
+  --text-color1: #fff;
+  --text-color2: rgba(255,255,255, 0.5);
 }
 *{
   margin: 0;
@@ -11,12 +15,15 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--background-color);
-  color: #fff;
+  color: var(--text-color1);
 }
 
 .flex{
   display: flex;
-  
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
 }
 .flex-justify-center{
   display: flex;
@@ -30,4 +37,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.justify-between{
+  justify-content: space-between;
 }

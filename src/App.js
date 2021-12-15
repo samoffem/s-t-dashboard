@@ -3,6 +3,7 @@ import './App.css';
 import styled from 'styled-components'
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
+import Dasboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
 
         <div className="main-content">
           <Topbar />
+          <Dasboard />
         </div>
       </Container>
     </div>
@@ -21,6 +23,8 @@ function App() {
 const Container = styled.div`
 
   .main-content{
+    padding-right: 40px;
+    padding-top: 40px;
     width: calc(100% - 159px);
     margin-left: 159px;
   }
