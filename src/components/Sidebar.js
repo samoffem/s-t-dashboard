@@ -3,7 +3,11 @@ const Sidebar = () => {
     return (
         <SidebarWrap>
             <div className="sidebar-content">
-                <h2 className="header-logo">Sport<br />Time</h2>
+                <div className="header-logo">
+                    <h2>Sport</h2>
+                    <h2>Time</h2>
+                </div>
+                
 
                 <div className="side-menu">
                     <div className="menu-item">
@@ -183,6 +187,39 @@ const SidebarWrap = styled.div`
             }
         }
     }
+
+    @media screen and (max-width: 1200px){
+        width: 100px;
+    }
+
+    @media screen and (max-width: 767px){
+
+        width: 50px;
+
+        .header-logo{
+            text-align: left;
+            h2{
+                font-size: 16px;
+            }
+            
+        }
+
+        .menu-item{
+            
+            justify-content: center;
+            span{
+                width: 30px;
+                height: 30px;
+                
+                svg{
+                    width: 18px !important;
+                    height: 18px !important;
+                }
+            }
+        }
+
+    }
+    
 `
 
 export default Sidebar

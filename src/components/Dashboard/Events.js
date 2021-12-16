@@ -65,19 +65,20 @@ const Container = styled.div`
     }
     .welcome-board{
         background-color: var(--border-color);
-        max-width: 547px;
+        width: 547px;
         height: 265px;
         overflow: visible;
         border-radius: 8px;
     }
     .message{
         height: 100%;
-        width: 550%;
+        width: 55%;
         padding: 16px;
+        font-size: 14px;
     }
     .msg-group{
         margin-top: 16px;
-        font-size: 18px;
+        font-size: 12px;
     }
     .image-wrap{
         width: 45%;
@@ -154,7 +155,7 @@ const Container = styled.div`
         margin-left: 8px;
 
         p{
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 
@@ -170,6 +171,75 @@ const Container = styled.div`
             border-radius: 5px;
             padding: 8px;
             cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 1359px){
+        .welcome-board{
+            width: 450px;
+        }
+        .reminder{
+            width: calc(100% - 450px);
+        }
+    }
+
+    @media screen and (max-width: 1100px){
+        .welcome-board{
+            width: 350px;
+        }
+        .reminder{
+            width: calc(100% - 350px);
+        }
+        .message{
+            font-size: 10px;
+            width: 70%;
+            
+            h2{
+                font-size: 12px;
+            }
+        }
+        .image-wrap{
+            width: 30%;
+            overflow: visible;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 1023px){
+        .wrapper{
+            flex-direction: column;
+        }
+        .welcome-board{
+            width: 100%;
+        }
+        .image-wrap{
+            img{
+                width: 100%;
+            }
+        }
+        .reminder{
+            width: 100%;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+        .add-btn{
+            margin-top: 15px;
+        }
+    }
+
+    @media screen and (max-width: 767px){
+
+        .image-wrap{
+            display: none;
+        }
+        .message{
+            width: 100%;
         }
     }
 

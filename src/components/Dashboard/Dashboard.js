@@ -4,7 +4,7 @@ import Contacts from './Contacts'
 import Events from './Events'
 import Schedule from './Schedule'
 
-const Dasboard = () => {
+const Dashboard = ({showSchedule}) => {
     return (
         <DashboardWrapper>
             <h1 className="dash-header">Dashboard</h1>
@@ -15,8 +15,8 @@ const Dasboard = () => {
                     <Contacts />
                 </div>
 
-                <div className="schedule-wrap">
-                    <Schedule />
+                <div className={`schedule-wrap ${showSchedule? 'show':''}`}>
+                    <Schedule/>
                 </div>
             </div>
             
@@ -36,6 +36,7 @@ const DashboardWrapper = styled.div`
     }
     .dashboard{
         position: relative;
+        overflow-x: hidden;
     }
     .main-board{
         width: calc(100% - 352px);
@@ -52,8 +53,35 @@ const DashboardWrapper = styled.div`
         top: 0;
         border: 1px solid var(--border-color);
         border-radius: 8px;
+        background: var(--background-color);
         
+    }
+
+    @media screen and (max-width: 1260px){
+
+        .main-board{
+            width: calc(100% - 250px);
+            padding-left: 30px;
+        }
+        .schedule-wrap{
+            width: 250px;
+        }
+    }
+
+    @media screen and (max-width: 767px){
+
+        .main-board{
+            width: 100%;
+            padding-left: 10px;
+        }
+        .schedule-wrap{
+            transform: translateX(500px);
+            transition: all 0.3s ease-in-out;
+        }
+        .schedule-wrap.show{
+            transform: translateX(0);
+        }
     }
 `
 
-export default Dasboard
+export default Dashboard

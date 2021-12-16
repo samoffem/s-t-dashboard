@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 import profilePic from '../assets/images/pic-1.jpg'
 
-const Topbar = () => {
+const Topbar = ({setShow}) => {
+
+    const handleClick = ()=>{
+        setShow(prev=> !prev)
+    }
     return (
         <TopbarWrap>
             <div className="bar-inner-wrap flex-align-center">
@@ -27,6 +31,16 @@ const Topbar = () => {
                         <img src={profilePic} alt="profile-pic" />
                     </div>
                     
+                </div>
+
+                <div className="calendar-mobile" onClick={handleClick}>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
+                        style={{fill: "rgba(255, 255, 255, 1)"}}><path d="M21 20V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 
+                        0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2zM9 
+                        18H7v-2h2v2zm0-4H7v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 
+                        4h-2v-2h2v2zm0-4h-2v-2h2v2zm2-5H5V7h14v2z"></path></svg>
+                    </span>
                 </div>
             </div>
         </TopbarWrap>
@@ -70,6 +84,35 @@ const TopbarWrap = styled.div`
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+    .calendar-mobile{
+        display: none;
+    }
+
+    @media screen and (max-width: 767px){
+        padding-right: 10px;
+        .top-left{
+            display: none;
+        }
+        .profile-pic{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            
+        }
+        .user-name{
+            font-size: 12px;
+        }
+        .user-type{
+            font-size: 10px;
+        }
+
+        .calendar-mobile{
+            display: block;
+            margin-left: 20px;
+            cursor: pointer;
+            
         }
     }
 

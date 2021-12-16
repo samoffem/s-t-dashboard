@@ -87,16 +87,17 @@ const ScheduleWrapper = styled.div`
 
         .venue{
             margin-top: 10px;
-            font-weight: 600;
+            font-weight: 400;
         }
         .schedule-time{
-            margin-top: 15px;
+            margin-top: 10px;
             color: var(--text-color2);
-            font-size: 14px;
+            font-size: 12px;
         }
         .schedule-name{
             padding: 8px;
             border-radius: 5px;
+            font-size: 14px;
         }
         .green{
             background: #39bd45;
@@ -107,11 +108,11 @@ const ScheduleWrapper = styled.div`
     }
     .headers{
         p:first-child{
-            font-size: 22px;
+            font-size: 20px;
             margin-left: 4px;
         }
         p:last-child{
-            font-size: 14px;
+            font-size: 12px;
             color: var(--border-color);
         }
     }

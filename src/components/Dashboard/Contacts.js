@@ -197,11 +197,11 @@ const ContactsWrapper = styled.div`
 
     .headers{
         p:first-child{
-            font-size: 22px;
+            font-size: 18px;
             margin-left: 4px;
         }
         p:last-child{
-            font-size: 14px;
+            font-size: 12px;
             color: var(--border-color);
         }
     }
@@ -243,6 +243,41 @@ const ContactsWrapper = styled.div`
 
         .chart-inner-wrap{
             height: 300px;
+        }
+    }
+
+    @media screen and (max-width: 1100px){
+        .contact-list-wrap{
+            width: 280px;
+        }
+        .chart-wrap{
+            width: calc(100% - 280px);
+        }
+        .headers{
+            p:first-child{
+                font-size: 14px;
+                margin-left: 4px;
+            }
+            p:last-child{
+                font-size: 10px;
+                color: var(--border-color);
+            }
+        }
+    }
+
+    @media screen and (max-width: 1023px){
+
+        .inner-wrapper{
+            flex-direction: column;
+        }
+
+        .contact-list-wrap{
+            width: 100%;
+        }
+        .chart-wrap{
+            width: 100%;
+            margin-left: 0;
+            margin-top: 20px;
         }
     }
 
